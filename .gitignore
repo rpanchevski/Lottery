@@ -1,0 +1,23 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/config
+/.vs/Lottery/v15/Server/sqlite3
+/Lottery.Data/bin/Debug
+/Lottery.Data/obj/Debug
+/Lottery.Data.Model/bin/Debug
+/Lottery.Data.Model/obj/Debug
+/Lottery.Mapper/bin/Debug
+/Lottery.Mapper/obj/Debug
+/Lottery.Service/bin/Debug
+/Lottery.Service/obj/Debug
+/Lottery.View.Model/bin/Debug
+/Lottery.View.Model/obj/Debug
+/Lottery.View.Models/obj/Debug
+/Lottery.WebApi/bin
+/Lottery.WebApi/obj/Debug
+/Lottery.WebApi.Tests/bin/Debug
+/Lottery.WebApi.Tests/obj/Debug
+/packages
+/.vs/Lottery/v15

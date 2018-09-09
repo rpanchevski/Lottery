@@ -21,3 +21,9 @@
 /Lottery.WebApi.Tests/obj/Debug
 /packages
 /.vs/Lottery/v15
+/.vs
+/Lottery.Data/obj/Release
+/Lottery.Data.Model/obj/Release
+/Lottery.Mapper/obj/Release
+/Lottery.Service/obj/Release
+/Lottery.View.Model/obj/Release

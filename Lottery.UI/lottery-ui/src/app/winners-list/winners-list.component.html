@@ -1,0 +1,16 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Full name</th>
+            <th>Award</th>
+            <th>Won At</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let winner of winners">
+            <td>{{winner.userCode.firstName}}</td>
+            <td>{{winner.award.awardName}}</td>
+            <td>{{winner.wonAt}}</td>
+        </tr>
+    </tbody>
+</table>

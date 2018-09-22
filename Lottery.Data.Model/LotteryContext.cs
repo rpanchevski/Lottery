@@ -5,7 +5,7 @@ namespace Lottery.Data.Model
 {
     public class LotteryContext : DbContext
     {
-        public LotteryContext() : base("LotteryDb")
+        public LotteryContext() : base("Data Source=192.168.0.22;Initial Catalog=LotteryDb;User ID=sa;Password=P@ssw0rd")
         {
         }
 

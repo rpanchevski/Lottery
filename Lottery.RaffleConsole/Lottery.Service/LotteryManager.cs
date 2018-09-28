@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.Extensions.Configuration;
 
 namespace Lottery.Service
 {
@@ -12,17 +13,32 @@ namespace Lottery.Service
         private readonly IRepository<Award> _awardRepository;
         private readonly IRepository<UserCodeAward> _userCodeAwardRepository;
         private readonly IRepository<UserCode> _userCodeRepository;
+        private readonly IConfigurationRoot _configurationRoot;
 
         public LotteryManager(IRepository<Award> awardRepository,
             IRepository<UserCodeAward> userCodeAwardRepository,
-            IRepository<UserCode> userCodeRepository)
+            IRepository<UserCode> userCodeRepository,
+            IConfigurationRoot configurationRoot)
         {
             _awardRepository = awardRepository;
             _userCodeAwardRepository = userCodeAwardRepository;
             _userCodeRepository = userCodeRepository;
+            _configurationRoot = configurationRoot;
         }
 
-        public void ProcessAwards(RaffledType type)
+        public void Raffle()
+        {
+            var finalDate = DateTime.Parse(_configurationRoot.GetSection("FinalRaffle").Value);
+
+            ProcessAwards(RaffledType.PerDay);
+
+            if (DateTime.Now.Date == finalDate.Date)
+            {
+                ProcessAwards(RaffledType.Final);
+            }
+        }
+
+        private void ProcessAwards(RaffledType type)
         {
             var numberOfAwards = GetAwardQuantityPerType(type);
 

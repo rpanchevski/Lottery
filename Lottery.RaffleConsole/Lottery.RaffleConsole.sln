@@ -5,11 +5,13 @@ VisualStudioVersion = 15.0.28010.2019
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lottery.RaffleConsole", "Lottery.RaffleConsole\Lottery.RaffleConsole.csproj", "{5B1337AC-3771-48E9-8A7A-4335FFD18451}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lottery.Data", "Lottery.Data\Lottery.Data.csproj", "{0D4C4FA6-88C7-42CB-A2CB-8DA2442A376B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lottery.Data", "Lottery.Data\Lottery.Data.csproj", "{0D4C4FA6-88C7-42CB-A2CB-8DA2442A376B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lottery.Data.Model", "Lottery.Data.Model\Lottery.Data.Model.csproj", "{B5EA2A6B-71FC-46EF-B8BE-C5AE965B898B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lottery.Data.Model", "Lottery.Data.Model\Lottery.Data.Model.csproj", "{B5EA2A6B-71FC-46EF-B8BE-C5AE965B898B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lottery.Service", "Lottery.Service\Lottery.Service.csproj", "{EA6E2604-8C85-4227-BA96-DE24BFD2F7BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lottery.Service", "Lottery.Service\Lottery.Service.csproj", "{EA6E2604-8C85-4227-BA96-DE24BFD2F7BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lottery.Scheduler", "Lottery.Scheduler\Lottery.Scheduler.csproj", "{2CACE0D8-6688-4A38-A361-062A609FD537}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{EA6E2604-8C85-4227-BA96-DE24BFD2F7BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA6E2604-8C85-4227-BA96-DE24BFD2F7BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA6E2604-8C85-4227-BA96-DE24BFD2F7BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CACE0D8-6688-4A38-A361-062A609FD537}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CACE0D8-6688-4A38-A361-062A609FD537}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CACE0D8-6688-4A38-A361-062A609FD537}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CACE0D8-6688-4A38-A361-062A609FD537}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -11,6 +11,7 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="2.1.1" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.1.1" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="2.1.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -20,6 +21,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Lottery.Data.Model\Lottery.Data.Model.csproj" />
     <ProjectReference Include="..\Lottery.Data\Lottery.Data.csproj" />
+    <ProjectReference Include="..\Lottery.Scheduler\Lottery.Scheduler.csproj" />
     <ProjectReference Include="..\Lottery.Service\Lottery.Service.csproj" />
   </ItemGroup>
 

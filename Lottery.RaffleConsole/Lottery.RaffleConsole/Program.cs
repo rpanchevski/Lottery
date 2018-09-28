@@ -1,11 +1,14 @@
 ﻿using System;
 using System.IO;
+using System.Threading;
 using Lottery.Data;
 using Lottery.Data.Model;
+using Lottery.Scheduler;
 using Lottery.Service;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 
 namespace Lottery.RaffleConsole
 {
@@ -15,19 +18,12 @@ namespace Lottery.RaffleConsole
         {
             var serviceProvider = Configure();
 
-            var lotteryManager = serviceProvider.GetService<ILotteryManager>();
-            var configuration = serviceProvider.GetService<IConfigurationRoot>();
+            var cronScheduleTask = serviceProvider.GetService<IHostedService>();
+            cronScheduleTask.StartAsync(new CancellationToken());
 
-            var finalDate = DateTime.Parse(configuration.GetSection("FinalRaffle").Value);
-
-            lotteryManager.ProcessAwards(RaffledType.PerDay);
-
-            if (DateTime.Now.Date == finalDate.Date)
+            while (true)
             {
-                lotteryManager.ProcessAwards(RaffledType.Final);
             }
-            
-            Console.WriteLine("Hello World!");
         }
 
         static ServiceProvider Configure()
@@ -44,6 +40,7 @@ namespace Lottery.RaffleConsole
                 .AddSingleton<DbContext, LotteryContext>()
                 .AddSingleton<ILotteryManager, LotteryManager>()
                 .AddSingleton(typeof(IRepository<>), typeof(Repository<>))
+                .AddSingleton<IHostedService, ScheduleTask>()
                 .BuildServiceProvider();
 
             return serviceProvider;

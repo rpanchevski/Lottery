@@ -47,3 +47,10 @@
 /Lottery.RaffleConsole/Lottery.Service/bin/release/netstandard2.0
 /Lottery.RaffleConsole/Lottery.RaffleConsole/publish
 /Lottery.RaffleConsole/Lottery.Scheduler/bin/Release/netstandard2.0
+/Lottery.ProcessCodes/.vs/Lottery.ProcessCodes/v15
+/Lottery.ProcessCodes/Lottery.ProcessCodes/obj
+/Lottery.ProcessCodes/Lottery.ProcessCodes/bin/Debug/netcoreapp2.1
+/Lottery.ProcessCodes/Lottery.Scheduler/bin/Debug/netstandard2.0
+/Lottery.ProcessCodes/Lottery.Scheduler/obj
+/Lottery.ProcessCodes/Lottery.Service/bin/Debug/netstandard2.0
+/Lottery.ProcessCodes/Lottery.Service/obj

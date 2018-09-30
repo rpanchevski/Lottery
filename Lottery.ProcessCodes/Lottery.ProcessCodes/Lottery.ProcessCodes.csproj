@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="..\..\Lottery.RaffleConsole\Lottery.RaffleConsole\appsettings.json" Link="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Lottery.RaffleConsole\Lottery.Data.Model\Lottery.Data.Model.csproj" />
+    <ProjectReference Include="..\..\Lottery.RaffleConsole\Lottery.Data\Lottery.Data.csproj" />
+    <ProjectReference Include="..\Lottery.Scheduler\Lottery.Scheduler.csproj" />
+    <ProjectReference Include="..\Lottery.Service\Lottery.Service.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.Extensions.Configuration">
+      <HintPath>..\..\..\..\..\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.extensions.configuration\2.1.1\lib\netstandard2.0\Microsoft.Extensions.Configuration.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
